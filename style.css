@@ -1,0 +1,146 @@
+/* p, a{
+    display: inline-block;
+    display: block;
+    width: 50%;
+    width: 20%;
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid #000;
+} */
+
+
+.wrapper{
+    background: #fff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+}
+.wrapper:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* .blue{
+    background:blue;
+    float: right;
+}
+.red{
+    background: red;
+    float: right;
+}
+.green{
+    background: green;
+    float: right;
+}
+.box{
+    height: 100px;
+    width: 100px;
+} */
+.service h2, .service p{
+    color: #999;
+    margin: 10px 0;
+    text-align: center;
+}
+.service{
+    float: left;
+    background: #eee;
+    width: 29.33%;
+    margin: 1%;
+    padding: 1%;
+    height: 140px;
+    position: relative;
+}
+.service:nth-child(1){
+    top: 5px;
+}
+.service:nth-child(2){
+    top: 15px;
+}
+.service:nth-child(3){
+    top: 25px;
+}
+.services{
+    /* to clip content we can use max height and overflow properties */
+    max-height: 150px;
+    overflow: hidden;
+}
+.services:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.content{
+    clear: both; 
+     /* clear both left and right floats ... clear :left; clear:right; clear: both;*/
+    padding: 10px;
+    /* background: #ccc; */
+    /* margin-top: 50px; */
+    margin: 20px 1%;
+
+    /* Using the position property we can offset by a amount from the top,left,right,left for a element */
+    /* in position relative , we are staying at the same position as in the normal document flow, we just can offset it by an amount */
+  /* position absolute, removes the element from normal document flow */
+    /* position fixed always self position itself relatively to the document , also taking elements out of normal flow*/
+}
+.content p{
+    -webkit-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 50px;
+    column-gap: 50px;
+    -webkit-column-rule: 1px solid #ccc;
+    column-rule: 1px solid #ccc;
+    text-align: center;
+}
+section,aside{
+    float: left;
+    width: 46%;
+    padding: 1%;
+    margin: 1%;
+    background: #f2f2f2;
+}
+.columns:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#banner{
+    max-height: 300px;
+    overflow: hidden;
+    margin: 1%;
+    position: relative;
+    z-index: 2;
+}
+#banner h2{
+    position: absolute;
+    top: 30px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+nav{
+    background: #333;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+}
+nav ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+nav li{
+    list-style-type: none;
+    margin: 0 10px;
+    color: #fff;
+    float: right;
+}
+
+/* the further down you are , the higher is the stacking order and vice versa*/
+
+/* z-index is used to control explicitly the stacking order */
+
